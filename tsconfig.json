@@ -2,7 +2,9 @@
   "extends": "@tsconfig/node16/tsconfig.json",
   "compilerOptions": {
     "moduleResolution": "node",
-    "outDir": "dist"
+    "outDir": "dist/types",
+    "declaration": true,
+    "emitDeclarationOnly": true
   },
   "include": ["src"]
 }
