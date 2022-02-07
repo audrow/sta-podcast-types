@@ -2,7 +2,9 @@
   "name": "@sta-podcast/types",
   "version": "1.0.3",
   "description": "Types used for the STA Podcast website.",
+  "main": "dist/cjs/index.js",
   "types": "dist/types/index.d.ts",
+  "module": "dist/esm/index.js",
   "source": "src/index.ts",
   "scripts": {
     "build": "npm run clean && npm run build:cjs && npm run build:esm && npm run build:types",
