@@ -1,12 +1,14 @@
 {
   "name": "@sta-podcast/types",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Types used for the STA Podcast website.",
   "types": "dist/types/index.d.ts",
   "source": "src/index.ts",
   "scripts": {
-    "build": "npm run clean && npm run build:types",
-    "build:types": "tsc",
+    "build": "npm run clean && npm run build:cjs && npm run build:esm && npm run build:types",
+    "build:cjs": "tsc --project ./tsconfig.cjs.json",
+    "build:esm": "tsc --project ./tsconfig.esm.json",
+    "build:types": "tsc --project ./tsconfig.types.json",
     "clean": "rm -rf dist",
     "prepare": "husky install",
     "lint": "eslint src --ignore-path .gitignore --max-warnings 0",
